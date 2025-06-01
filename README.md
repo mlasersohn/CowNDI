@@ -15,20 +15,17 @@ You must have the OpenCV and NDISDK development libraries installed as this prog
 to have a program like CowCam or OBS Studio (with a NDI plugin) installed so as to view the created NDI stream.<br><br>
 
 Syntax: cow_ndi camera_path [ndi_stream_name] [video_format]<br>
-	camera_path is the path to the camera. This may be a device, such as as USB device,
-	in the /dev directory, or it may be a video file. It can be any file OpenCV can use
-	as a capture device.<br>
-	The optional argument ndi_stream_name is the name listed by NDI™ for the video stream.<br>
-	The optional argument video_format, is an integer ranging from 0 to 4, used to specify
-	the NDI™ video format for the stream:<br>
-		0 = BGRX<br>
-		1 = RGBX<br>
-		2 = I420<br>
-		3 = UYVA<br>
-		4 = UYVY<br>
-	I420 is the default.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	camera_path is the path to the camera. This may be a device, such as as USB device, in the /dev directory, or it may be a video file. It can be any file OpenCV can use as a capture device.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The optional argument ndi_stream_name is the name listed by NDI™ for the video stream.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The optional argument video_format, is an integer ranging from 0 to 4, used to specify the NDI™ video format for the stream:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		0 = BGRX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		1 = RGBX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		2 = I420<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		3 = UYVA<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		4 = UYVY<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I420 is the default.<br><br>
 
 Examples:<br>
-	cow_ndi /dev/video0 ; Stream name defaults to 'Cow NDI' and frame format to I420<br>
-	cow_ndi /dev/video0 MyStreamName ; Frame format defaults to I420<br>
-	cow_ndi /dev/video0 MyStreamName 3 ; Stream will use UYVA video frame format<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cow_ndi /dev/video0 ; Stream name defaults to 'Cow NDI' and frame format to I420<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cow_ndi /dev/video0 MyStreamName ; Frame format defaults to I420<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cow_ndi /dev/video0 MyStreamName 3 ; Stream will use UYVA video frame format<br>
