@@ -1,0 +1,1 @@
+g++ -Wno-write-strings cow_ndi.cpp -o cow_ndi -I/usr/local/include/ndi `pkg-config --cflags --libs opencv`
